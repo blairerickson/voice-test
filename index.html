@@ -25,6 +25,7 @@ var commands = {
 var showFlickr = function(tag) {
   var url = 'http://api.flickr.com/services/rest/?tags='+tag;
   $.getJSON(url);
+  console.log(url);
 }
 
 var calculateStats = function(month) {
