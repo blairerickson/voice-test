@@ -9,8 +9,8 @@
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
-    'test': function() {
-      alert("TEST!");
+    'test *tag': function(tag) {
+      alert("TESTING..." + tag);
     }
     
   };
@@ -22,24 +22,24 @@ if (annyang) {
   annyang.start();
 }
 
-// var Marvel = function (tag) 
-// {
-//     var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
-//     var PUBLIC_KEY = "31f470f4364dd518ad52e9fe9902ae7e";
-//     var ts = new Date().getTime();
-//     var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
-//     var marvelAPI = "https://gateway.marvel.com/v1/public/characters/1009718?name=" + tag + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
+var Marvel = function (tag) 
+{
+    var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
+    var PUBLIC_KEY = "31f470f4364dd518ad52e9fe9902ae7e";
+    var ts = new Date().getTime();
+    var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
+    var marvelAPI = "https://gateway.marvel.com/v1/public/characters/1009718?name=" + tag + "&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
      
-//         $.ajax  ({
-//            dataType: "json",
-//            url: marvelAPI
-//            })
-//            .done(function(data) {
-//              // sort of a long dump you will need to sort through
-//              console.log(data);
-//           });
+        $.ajax  ({
+           dataType: "json",
+           url: marvelAPI
+           })
+           .done(function(data) {
+             // sort of a long dump you will need to sort through
+             console.log(data);
+          });
 
-// }
+}
 
 
 
