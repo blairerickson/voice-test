@@ -11,19 +11,7 @@ if (annyang) {
   var commands = {
     'test *tag': function(tag) {
       alert("TESTING..." + tag);
-    }
-    
-  };
 
-  // Add our commands to annyang
-  annyang.addCommands(commands);
-
-  // Start listening. You can call this here, or attach this call to an event, button, etc.
-  annyang.start();
-}
-
-var Marvel = function (tag) 
-{
     var PRIV_KEY = "e6abd0558c8f951d1017bdab251fc8c672e6c845";
     var PUBLIC_KEY = "31f470f4364dd518ad52e9fe9902ae7e";
     var ts = new Date().getTime();
@@ -39,7 +27,21 @@ var Marvel = function (tag)
              console.log(data);
           });
 
+
+
+    }
+    
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
 }
+
+
+
 
 
 
