@@ -19,7 +19,7 @@ var commands = {
 
   // By defining a part of the following command as optional, annyang will respond to both:
   // "say hello to my little friend" as well as "say hello friend"
-  'say hello (to my little) friend': greeting
+  'test': greeting
 };
 
 var showFlickr = function(tag) {
@@ -30,10 +30,13 @@ var showFlickr = function(tag) {
 
 var calculateStats = function(month) {
   $('#stats').text('Statistics for '+month);
+  console.log("calculate")
 }
 
 var greeting = function() {
   $('#greeting').text('Hello!');
+  console.log("GREETINGS");
+  alert("greetings!");
 }
 
 
